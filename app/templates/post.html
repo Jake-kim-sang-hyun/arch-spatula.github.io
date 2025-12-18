@@ -1,0 +1,49 @@
+<ul class="tag-list">
+  {{#each tags}}
+  <li class="tag-item" data-id="{{this}}">
+    <a href="#" data-tag="{{this}}" class="tag-text">#{{this}}</a>
+  </li>
+  {{/each}}
+</ul>
+<div id="content" class="markdown-body">{{content}}</div>
+<aside id="toc">
+  <ul class="toc-list">
+    {{#each toc}}
+    <li class="toc-item toc-level-{{level}}">
+      <a href="#{{id}}">{{heading}}</a>
+    </li>
+    {{/each}}
+  </ul>
+</aside>
+<nav class="post-navigation">
+  {{#if previousPost}}
+  <div class="previous-post">
+    <span class="nav-label">← 이전 글</span>
+    <a href="{{previousPostFilePath}}" class="nav-link">{{previousPostTitle}}</a>
+  </div>
+  {{/if}} {{#if nextPost}}
+  <div class="next-post">
+    <span class="nav-label">다음 글 →</span>
+    <a href="{{nextPostFilePath}}" class="nav-link">{{nextPostTitle}}</a>
+  </div>
+  {{/if}}
+</nav>
+<div id="comments">
+  <script
+    src="https://giscus.app/client.js"
+    data-repo="arch-spatula/arch-spatula.github.io"
+    data-repo-id="R_kgDOImK9Dg"
+    data-category="General"
+    data-category-id="DIC_kwDOImK9Ds4CUzIZ"
+    data-mapping="pathname"
+    data-strict="0"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="dark_dimmed"
+    data-lang="ko"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async
+  ></script>
+</div>

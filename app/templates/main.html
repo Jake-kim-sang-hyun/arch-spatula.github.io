@@ -1,0 +1,21 @@
+<main id="main">
+  <ul class="blog-list">
+    {{#each posts}}
+    <li class="blog-item">
+      <div>
+        <a href="{{filePath}}" class="blog-link">{{title}}</a>
+        <p class="blog-date">{{date}}</p>
+        <ul class="tag-list">
+          {{#each tags}}
+          <li class="tag-item" data-id="{{this}}">
+            <a href="#" data-tag="{{this}}" class="tag-text">#{{this}}</a>
+          </li>
+          {{/each}}
+        </ul>
+        <p class="blog-description">{{description}}</p>
+        <hr class="blog-divider" />
+      </div>
+    </li>
+    {{/each}}
+  </ul>
+</main>

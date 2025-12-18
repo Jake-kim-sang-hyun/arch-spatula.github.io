@@ -28,3 +28,13 @@ yarn-error.log*
 .data
 .env
 dist
+dist/
+coverage/
+
+# Playwright
+node_modules/
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/playwright/.auth/
